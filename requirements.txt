@@ -1,0 +1,9 @@
+pandas
+numpy
+google-cloud-storage
+pyyaml
+scikit-learn
+tensorflow
+comet-ml
+flask
+dvc

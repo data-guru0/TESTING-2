@@ -1,0 +1,224 @@
+2025-01-14 13:18:46,796 - INFO - Succesfully read the YAML file
+2025-01-14 13:18:46,812 - INFO - Data Ingestion started with mlops-project-2 and files are anime.csv, anime_with_synopsis.csv, animelist.csv
+2025-01-14 13:18:46,812 - INFO - Starting data ingestion process
+2025-01-14 13:18:49,730 - INFO - CSV file 'anime.csv' successfully downloaded to artifacts/raw\anime.csv
+2025-01-14 13:18:52,325 - INFO - CSV file 'anime_with_synopsis.csv' successfully downloaded to artifacts/raw\anime_with_synopsis.csv
+2025-01-14 13:20:57,851 - INFO - CSV file 'animelist.csv' successfully downloaded to artifacts/raw\animelist.csv
+2025-01-14 13:20:57,851 - INFO - Data ingestion completed successfully
+2025-01-14 13:20:57,851 - INFO - Data ingestion completed
+2025-01-14 13:24:04,818 - INFO - Succesfully read the YAML file
+2025-01-14 13:24:04,819 - INFO - Data Ingestion started with mlops-project-2 and files are anime.csv, anime_with_synopsis.csv, animelist.csv
+2025-01-14 13:24:04,819 - INFO - Starting data ingestion process
+2025-01-14 13:24:07,750 - INFO - CSV file 'anime.csv' successfully downloaded to artifacts/raw\anime.csv
+2025-01-14 13:24:10,402 - INFO - CSV file 'anime_with_synopsis.csv' successfully downloaded to artifacts/raw\anime_with_synopsis.csv
+2025-01-14 13:26:00,892 - INFO - Data ingestion completed
+2025-01-14 13:27:20,392 - INFO - Succesfully read the YAML file
+2025-01-14 13:27:20,392 - INFO - Data Ingestion started with mlops-project-2 and files are anime.csv, anime_with_synopsis.csv, animelist.csv
+2025-01-14 13:27:20,392 - INFO - Starting data ingestion process
+2025-01-14 13:27:23,360 - INFO - CSV file 'anime.csv' successfully downloaded to artifacts/raw\anime.csv
+2025-01-14 13:27:25,960 - INFO - CSV file 'anime_with_synopsis.csv' successfully downloaded to artifacts/raw\anime_with_synopsis.csv
+2025-01-14 13:29:30,509 - INFO - Large file animelist.csv downloaded, now reading the first 50 lakh rows.
+2025-01-14 13:29:37,220 - INFO - 50 Lakh rows of animelist.csv saved to artifacts/raw\animelist.csv
+2025-01-14 13:29:37,237 - INFO - Data ingestion completed successfully
+2025-01-14 13:29:37,237 - INFO - Data ingestion completed
+2025-01-14 16:43:13,818 - INFO - DataProcessing instance initialized.
+2025-01-14 16:43:15,099 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:43:15,322 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:43:16,664 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:43:16,815 - INFO - User and anime encoding completed.
+2025-01-14 16:43:17,564 - INFO - Data split into training and testing sets.
+2025-01-14 16:43:17,575 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:43:17,583 - INFO - user_encoded2user saved successfully.
+2025-01-14 16:43:17,625 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:43:17,658 - INFO - anime_encoded2anime saved successfully.
+2025-01-14 16:43:17,691 - INFO - Processed data saved successfully.
+2025-01-14 16:43:17,691 - INFO - Data processing pipeline completed successfully.
+2025-01-14 16:51:57,490 - INFO - DataProcessing instance initialized.
+2025-01-14 16:51:58,822 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:51:58,991 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:52:00,238 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:52:00,384 - INFO - User and anime encoding completed.
+2025-01-14 16:52:01,055 - INFO - Data split into training and testing sets.
+2025-01-14 16:52:01,062 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:52:01,070 - INFO - user_encoded2user saved successfully.
+2025-01-14 16:52:01,099 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:52:01,128 - INFO - anime_encoded2anime saved successfully.
+2025-01-14 16:52:01,165 - INFO - Processed data saved successfully.
+2025-01-14 16:52:01,165 - INFO - Data processing pipeline completed successfully.
+2025-01-14 16:55:56,524 - INFO - DataProcessing instance initialized.
+2025-01-14 16:55:57,728 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:55:57,923 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:55:59,235 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:55:59,381 - INFO - User and anime encoding completed.
+2025-01-14 16:56:00,206 - INFO - Data split into training and testing sets.
+2025-01-14 16:56:00,214 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:56:00,221 - INFO - user_encoded2user saved successfully.
+2025-01-14 16:56:00,252 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:56:00,282 - INFO - anime_encoded2anime saved successfully.
+2025-01-14 16:56:00,331 - INFO - Processed data saved successfully.
+2025-01-14 16:56:00,331 - INFO - Data processing pipeline completed successfully.
+2025-01-14 16:57:08,228 - INFO - DataProcessing instance initialized.
+2025-01-14 16:57:09,420 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:57:09,613 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:57:10,949 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:57:11,081 - INFO - User and anime encoding completed.
+2025-01-14 16:57:11,744 - INFO - Data split into training and testing sets.
+2025-01-14 16:57:11,759 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:57:11,773 - INFO - user_encoded2user saved successfully.
+2025-01-14 16:57:11,811 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:57:11,889 - INFO - anime_encoded2anime saved successfully.
+2025-01-14 16:57:11,948 - INFO - Processed data saved successfully.
+2025-01-14 16:57:11,948 - INFO - Data processing pipeline completed successfully.
+2025-01-14 16:57:33,933 - INFO - DataProcessing instance initialized.
+2025-01-14 16:57:35,175 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:57:35,367 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:57:36,757 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:57:36,925 - INFO - User and anime encoding completed.
+2025-01-14 16:57:37,634 - INFO - Data split into training and testing sets.
+2025-01-14 16:57:37,646 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:57:37,657 - INFO - user_encoded2user saved successfully.
+2025-01-14 16:57:37,697 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:57:37,740 - INFO - anime_encoded2anime saved successfully.
+2025-01-14 16:57:37,772 - INFO - Processed data saved successfully.
+2025-01-14 16:57:37,772 - INFO - Data processing pipeline completed successfully.
+2025-01-14 16:58:28,677 - INFO - DataProcessing instance initialized.
+2025-01-14 16:58:29,813 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 16:58:29,969 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 16:58:31,196 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 16:58:31,327 - INFO - User and anime encoding completed.
+2025-01-14 16:58:31,964 - INFO - Data split into training and testing sets.
+2025-01-14 16:58:31,972 - INFO - user2user_encoded saved successfully.
+2025-01-14 16:58:31,983 - INFO - user2user_decoded saved successfully.
+2025-01-14 16:58:32,023 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 16:58:32,054 - INFO - anime2anime_decoded saved successfully.
+2025-01-14 16:58:32,092 - INFO - Processed data saved successfully.
+2025-01-14 16:58:32,092 - INFO - Data processing pipeline completed successfully.
+2025-01-14 17:03:01,720 - INFO - DataProcessing instance initialized.
+2025-01-14 17:03:02,989 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 17:03:03,218 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 17:03:04,488 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 17:03:04,656 - INFO - User and anime encoding completed.
+2025-01-14 17:03:05,378 - INFO - Data split into training and testing sets.
+2025-01-14 17:03:05,389 - INFO - user2user_encoded saved successfully.
+2025-01-14 17:03:05,397 - INFO - user2user_decoded saved successfully.
+2025-01-14 17:03:05,431 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 17:03:05,461 - INFO - anime2anime_decoded saved successfully.
+2025-01-14 17:03:05,492 - INFO - Processed data saved successfully.
+2025-01-14 17:03:05,493 - INFO - Data processing pipeline completed successfully.
+2025-01-14 17:42:43,871 - INFO - DataProcessing instance initialized.
+2025-01-14 17:42:45,133 - INFO - Data loaded successfully from artifacts/raw/animelist.csv. Shape: (5000000, 3)
+2025-01-14 17:42:45,311 - INFO - Filtered users with at least 400 ratings. Remaining data shape: (3246641, 3)
+2025-01-14 17:42:46,650 - INFO - Ratings scaled between 0 and 1.
+2025-01-14 17:42:46,783 - INFO - User and anime encoding completed.
+2025-01-14 17:42:47,545 - INFO - Data split into training and testing sets.
+2025-01-14 17:42:47,560 - INFO - user2user_encoded saved successfully.
+2025-01-14 17:42:47,568 - INFO - user2user_decoded saved successfully.
+2025-01-14 17:42:47,604 - INFO - anime2anime_encoded saved successfully.
+2025-01-14 17:42:47,633 - INFO - anime2anime_decoded saved successfully.
+2025-01-14 17:42:47,712 - INFO - Processed data saved successfully.
+2025-01-14 17:42:47,712 - INFO - Data processing pipeline completed successfully.
+2025-01-14 17:45:15,652 - ERROR - Error while reading YAML file
+2025-01-14 17:46:49,868 - INFO - Succesfully read the YAML file
+2025-01-14 17:46:50,000 - INFO - Successfully loaded data
+2025-01-14 17:46:50,001 - INFO - Succesfully read the YAML file
+2025-01-14 17:46:50,001 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 17:47:39,932 - INFO - Succesfully read the YAML file
+2025-01-14 17:47:39,999 - INFO - Successfully loaded data
+2025-01-14 17:47:40,000 - INFO - Succesfully read the YAML file
+2025-01-14 17:47:40,000 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 17:47:40,001 - ERROR - Error occurred while creating the model: name 'n_users' is not defined
+2025-01-14 17:49:32,900 - INFO - Succesfully read the YAML file
+2025-01-14 17:49:32,965 - INFO - Successfully loaded data
+2025-01-14 17:49:33,014 - INFO - Succesfully read the YAML file
+2025-01-14 17:49:33,015 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 17:49:33,091 - INFO - Model created successfully
+2025-01-14 17:50:23,162 - INFO - Model training completed successfully
+2025-01-14 17:50:23,163 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 17:50:23,235 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 17:50:23,264 - INFO - User and anime weights saved successfully
+2025-01-14 18:45:31,548 - INFO - Succesfully read the YAML file
+2025-01-14 18:45:31,608 - INFO - Successfully loaded data
+2025-01-14 18:45:31,627 - INFO - Succesfully read the YAML file
+2025-01-14 18:45:31,628 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 18:45:31,762 - INFO - Model created successfully
+2025-01-14 18:46:22,089 - INFO - Model training completed successfully
+2025-01-14 18:46:22,090 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 18:46:22,181 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 18:46:22,205 - INFO - User and anime weights saved successfully
+2025-01-14 18:49:48,569 - INFO - Succesfully read the YAML file
+2025-01-14 18:49:48,686 - INFO - Successfully loaded data
+2025-01-14 18:49:48,709 - INFO - Succesfully read the YAML file
+2025-01-14 18:49:48,709 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 18:49:48,813 - INFO - Model created successfully
+2025-01-14 18:50:50,968 - INFO - Model training completed successfully
+2025-01-14 18:50:50,968 - INFO - Epoch 1: Training Loss = 0.7957044243812561, Validation Loss = 0.7128094434738159
+2025-01-14 18:50:50,968 - INFO - Epoch 2: Training Loss = 0.792228639125824, Validation Loss = 0.7731362581253052
+2025-01-14 18:50:50,968 - INFO - Epoch 3: Training Loss = 0.7863813638687134, Validation Loss = 0.7808459401130676
+2025-01-14 18:50:50,968 - INFO - Epoch 4: Training Loss = 0.7780176401138306, Validation Loss = 0.7767033576965332
+2025-01-14 18:50:50,968 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 18:50:51,025 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 18:50:51,045 - INFO - User and anime weights saved successfully
+2025-01-14 19:02:24,235 - INFO - Succesfully read the YAML file
+2025-01-14 19:03:55,481 - INFO - Succesfully read the YAML file
+2025-01-14 19:05:27,135 - INFO - Succesfully read the YAML file
+2025-01-14 19:06:07,876 - INFO - Succesfully read the YAML file
+2025-01-14 19:07:08,887 - INFO - Succesfully read the YAML file
+2025-01-14 19:07:10,935 - INFO - Comet.ml Experiment initialized in offline mode.
+2025-01-14 19:07:11,021 - INFO - Successfully loaded data
+2025-01-14 19:07:11,052 - INFO - Succesfully read the YAML file
+2025-01-14 19:07:11,052 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:07:11,142 - INFO - Model created successfully
+2025-01-14 19:08:09,946 - INFO - Succesfully read the YAML file
+2025-01-14 19:08:12,027 - INFO - Comet.ml Experiment initialized in offline mode.
+2025-01-14 19:08:12,108 - INFO - Successfully loaded data
+2025-01-14 19:08:12,138 - INFO - Succesfully read the YAML file
+2025-01-14 19:08:12,138 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:08:12,245 - INFO - Model created successfully
+2025-01-14 19:11:20,840 - INFO - Succesfully read the YAML file
+2025-01-14 19:11:20,904 - INFO - Successfully loaded data
+2025-01-14 19:11:20,924 - INFO - Succesfully read the YAML file
+2025-01-14 19:11:20,924 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:11:21,006 - INFO - Model created successfully
+2025-01-14 19:12:46,879 - INFO - Succesfully read the YAML file
+2025-01-14 19:14:05,919 - INFO - Succesfully read the YAML file
+2025-01-14 19:14:06,993 - INFO - Comet experiment initialized in offline mode.
+2025-01-14 19:14:07,050 - INFO - Successfully loaded data
+2025-01-14 19:14:07,071 - INFO - Succesfully read the YAML file
+2025-01-14 19:14:07,071 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:14:07,219 - INFO - Model created successfully
+2025-01-14 19:15:08,372 - INFO - Model training completed successfully
+2025-01-14 19:15:08,372 - INFO - Epoch 1: Training Loss = 0.724582314491272, Validation Loss = 0.6948045492172241
+2025-01-14 19:15:08,373 - INFO - Epoch 2: Training Loss = 0.7218084931373596, Validation Loss = 0.7103139758110046
+2025-01-14 19:15:08,373 - INFO - Epoch 3: Training Loss = 0.7174193263053894, Validation Loss = 0.7234660387039185
+2025-01-14 19:15:08,375 - INFO - Epoch 4: Training Loss = 0.7116230726242065, Validation Loss = 0.7195780873298645
+2025-01-14 19:15:08,375 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 19:15:08,482 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 19:15:08,540 - INFO - User and anime weights saved successfully
+2025-01-14 19:17:03,685 - INFO - Succesfully read the YAML file
+2025-01-14 19:17:04,487 - INFO - Comet experiment initialized in offline mode.
+2025-01-14 19:17:04,559 - INFO - Successfully loaded data
+2025-01-14 19:17:04,585 - INFO - Succesfully read the YAML file
+2025-01-14 19:17:04,585 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:17:04,680 - INFO - Model created successfully
+2025-01-14 19:18:09,044 - INFO - Model training completed successfully
+2025-01-14 19:18:09,044 - INFO - Epoch 1: Training Loss = 0.7988977432250977, Validation Loss = 0.7175477743148804
+2025-01-14 19:18:09,046 - INFO - Epoch 2: Training Loss = 0.7953585386276245, Validation Loss = 0.7724067568778992
+2025-01-14 19:18:09,046 - INFO - Epoch 3: Training Loss = 0.7893819808959961, Validation Loss = 0.7766727209091187
+2025-01-14 19:18:09,047 - INFO - Epoch 4: Training Loss = 0.7807437777519226, Validation Loss = 0.7727947235107422
+2025-01-14 19:18:09,048 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 19:18:09,169 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 19:18:09,220 - INFO - User and anime weights saved successfully
+2025-01-14 19:23:09,526 - INFO - Succesfully read the YAML file
+2025-01-14 19:23:12,932 - INFO - Comet experiment initialized in online mode.
+2025-01-14 19:23:13,033 - INFO - Successfully loaded data
+2025-01-14 19:23:13,056 - INFO - Succesfully read the YAML file
+2025-01-14 19:23:13,056 - INFO - Successfully loaded configuration from config/config.yaml
+2025-01-14 19:23:13,131 - INFO - Model created successfully
+2025-01-14 19:24:18,461 - INFO - Model training completed successfully
+2025-01-14 19:24:18,461 - INFO - Epoch 1: Training Loss = 0.8036344647407532, Validation Loss = 0.7561784386634827
+2025-01-14 19:24:18,462 - INFO - Epoch 2: Training Loss = 0.8000544309616089, Validation Loss = 0.7955321073532104
+2025-01-14 19:24:18,462 - INFO - Epoch 3: Training Loss = 0.7940049171447754, Validation Loss = 0.7955585718154907
+2025-01-14 19:24:18,463 - INFO - Epoch 4: Training Loss = 0.7852864265441895, Validation Loss = 0.7917985320091248
+2025-01-14 19:24:18,464 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-01-14 19:24:18,572 - INFO - Model saved successfully to ./artifacts/model/model.h5
+2025-01-14 19:24:18,616 - INFO - User and anime weights saved successfully
