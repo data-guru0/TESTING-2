@@ -7,3 +7,4 @@ tensorflow
 comet-ml
 flask
 dvc
+dvc-gs
