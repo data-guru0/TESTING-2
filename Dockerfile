@@ -5,8 +5,15 @@ FROM python:3.9-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Install Python and necessary dependencies (pip, gfortran, git, etc.)
-RUN apk add --no-cache python3 py3-pip libhdf5-dev libblas-dev liblapack-dev gfortran git
+# Install system dependencies required for TensorFlow and DVC
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libhdf5-dev \
+    libblas-dev \
+    liblapack-dev \
+    gfortran \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Ensure the 'artifacts' directory and required subfolders exist before anything else
 RUN mkdir -p /app/artifacts/raw /app/artifacts/processed /app/artifacts/model /app/artifacts/model_checkpoint /app/artifacts/weights && \
