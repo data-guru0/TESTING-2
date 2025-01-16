@@ -25,11 +25,14 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install dvc
 
+# Set the GOOGLE_APPLICATION_CREDENTIALS environment variable inside the Docker container
+ENV GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
+
 # Pull the data from DVC
 RUN dvc pull
 
 # Ensure the 'artifacts' directory and required subfolders exist
-RUN mkdir -p artifacts/raw artifacts/processed && chmod -R 777 artifacts/
+RUN mkdir -p artifacts/raw artifacts/processed artifacts/model artifacts/model_checkpoint artifacts/weights && chmod -R 777 artifacts/
 
 # Check if the 'animelist.csv' file is present in the 'artifacts/raw' folder before running the pipeline
 RUN test -f artifacts/raw/animelist.csv || (echo "File animelist.csv not found!" && exit 1)
