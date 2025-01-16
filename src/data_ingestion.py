@@ -33,7 +33,7 @@ class DataIngestion:
                     
                     # Read only the first 50 lakh rows from 'animelist.csv'
                     logger.info(f"Large file {file_name} downloaded, now reading the first 50 lakh rows.")
-                    data = pd.read_csv(file_path, nrows=5000000)  # Read only 5 million rows
+                    data = pd.read_csv(file_path, nrows=500)  # Read only 5 million rows
                     
                     # Save the first 50 lakh rows to the same file path
                     data.to_csv(file_path, index=False)
