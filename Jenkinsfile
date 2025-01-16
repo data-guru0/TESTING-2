@@ -17,38 +17,29 @@ pipeline {
             }
         }
 
-        stage('Setting up Virtual Environment and Installing dependencies') {
+        stage('Setting up our Virtual Environment and Installing dependencies') {
             steps {
                 script {
-                    echo 'Setting up Virtual Environment and Installing dependencies............'
+                    echo 'Setting up our Virtual Environment and Installing dependencies............'
                     sh '''
                     python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
+                    pip install dvc  # Install DVC
                     '''
                 }
             }
         }
 
-        stage('Pulling DVC Data') {
+        stage('DVC Pull') {
             steps {
-                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    script {
-                        echo 'Pulling DVC Data.............'
-                        sh '''
-                        export PATH=$PATH:${GCLOUD_PATH}
-
-                        # Authenticate using the service account
-                        gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
-
-                        # Set project
-                        gcloud config set project ${GCP_PROJECT}
-
-                        # Pull the DVC-tracked data
-                        dvc pull
-                        '''
-                    }
+                script {
+                    echo 'Pulling DVC data from remote storage.............'
+                    sh '''
+                    . ${VENV_DIR}/bin/activate
+                    dvc pull
+                    '''
                 }
             }
         }
@@ -60,18 +51,10 @@ pipeline {
                         echo 'Building and Pushing Docker Image to GCR.............'
                         sh '''
                         export PATH=$PATH:${GCLOUD_PATH}
-
-                        # Authenticate using the service account
                         gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
-
-                        # Set project and configure Docker to use GCR
                         gcloud config set project ${GCP_PROJECT}
                         gcloud auth configure-docker --quiet
-
-                        # Build the Docker image and pass the credentials file as build argument
-                        docker build --build-arg GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS} -t gcr.io/${GCP_PROJECT}/ml-project:latest .
-
-                        # Push the Docker image to Google Container Registry (GCR)
+                        docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
                         docker push gcr.io/${GCP_PROJECT}/ml-project:latest
                         '''
                     }
