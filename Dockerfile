@@ -24,6 +24,9 @@ COPY . .
 # Install dependencies from requirements.txt
 RUN pip install --no-cache-dir -e .
 
+# Pull DVC-tracked data
+RUN dvc pull
+
 # Train the model before running the application
 RUN python pipeline/training_pipeline.py
 
