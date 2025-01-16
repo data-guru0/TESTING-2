@@ -32,14 +32,16 @@ pipeline {
             }
         }
 
-        stage('DVC Pull') {
+        stage('DVC PULLL') {
             steps {
-                script {
-                    echo 'Pulling DVC data from remote storage.............'
-                    sh '''
-                    . ${VENV_DIR}/bin/activate
-                    dvc pull
-                    '''
+                withCredentials([file(credentialsId: 'gcp-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                    script {
+                        echo 'DVC PULL.............'
+                        sh '''
+                        . ${VENV_DIR}/bin/activate
+                        dvc pull
+                        '''
+                    }
                 }
             }
         }
