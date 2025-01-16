@@ -8,20 +8,25 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Set the working directory
 WORKDIR /app
 
-# Install system dependencies required for TensorFlow
+# Install system dependencies required for TensorFlow and DVC
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libhdf5-dev \
     libblas-dev \
     liblapack-dev \
     gfortran \
+    git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the application code
 COPY . .
 
-# Install the package in editable mode along with TensorFlow
-RUN pip install --no-cache-dir -e .
+# Install the required Python dependencies, including DVC
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install dvc
+
+# Pull the data from DVC
+RUN dvc pull
 
 # Ensure the 'artifacts' directory and required subfolders exist
 RUN mkdir -p artifacts/raw artifacts/processed && chmod -R 777 artifacts/
