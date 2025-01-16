@@ -23,11 +23,8 @@ COPY . .
 # Install the package in editable mode along with TensorFlow
 RUN pip install --no-cache-dir -e .
 
-# Step to run the data ingestion process
-RUN python -m src.data_ingestion
-
-# Verify that the file exists
-RUN test -f artifacts/raw/animelist.csv || (echo "File animelist.csv not found!" && exit 1)
+# Create the artifacts directory before running the training pipeline
+RUN mkdir -p artifacts
 
 # Train the model before running the application
 RUN python pipeline/training_pipeline.py
