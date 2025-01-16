@@ -23,6 +23,12 @@ COPY . .
 # Install the package in editable mode along with TensorFlow
 RUN pip install --no-cache-dir -e .
 
+# Ensure the 'artifacts' directory and required subfolders exist
+RUN mkdir -p artifacts/raw artifacts/processed && chmod -R 777 artifacts/
+
+# Check if the 'animelist.csv' file is present in the 'artifacts/raw' folder before running the pipeline
+RUN test -f artifacts/raw/animelist.csv || (echo "File animelist.csv not found!" && exit 1)
+
 # Train the model before running the application
 RUN python pipeline/training_pipeline.py
 
