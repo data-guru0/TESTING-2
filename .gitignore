@@ -1,6 +1,8 @@
-artifacts/*
-!artifacts/*.dvc
-!artifacts/.gitignore
+artifacts/raw/
+artifacts/processed/
+artifacts/model/
+artifacts/model_checkpoint/
+artifacts/weights/
 venv/
 .cometml-runs/
 MLOPS_PROJECT_1.egg-info/
