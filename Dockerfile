@@ -25,6 +25,9 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install dvc
 
+# Add this line at the top to define the build argument
+ARG GOOGLE_APPLICATION_CREDENTIALS
+
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable inside the Docker container
 ENV GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS}
 
