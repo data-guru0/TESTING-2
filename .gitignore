@@ -6,4 +6,3 @@ artifacts/weights/
 venv/
 .cometml-runs/
 MLOPS_PROJECT_1.egg-info/
-/artifacts
