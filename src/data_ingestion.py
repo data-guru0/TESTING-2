@@ -13,7 +13,9 @@ class DataIngestion:
         self.config = config["data_ingestion"]
         self.bucket_name = self.config["bucket_name"]
         self.file_names = self.config["bucket_file_names"]
-        os.makedirs(RAW_DIR, exist_ok=True)
+
+        # Create the 'artifacts' directory and 'raw' subdirectory
+        os.makedirs(os.path.join('artifacts', 'raw'), exist_ok=True)
 
         logger.info(f"Data Ingestion started with {self.bucket_name} and files are {', '.join(self.file_names)}")
 
@@ -24,7 +26,7 @@ class DataIngestion:
 
             # Loop through the files to download them
             for file_name in self.file_names:
-                file_path = os.path.join(RAW_DIR, file_name)
+                file_path = os.path.join('artifacts', 'raw', file_name)
                 
                 # If the file is 'animelist.csv', we download only the first 50 lakh rows
                 if file_name == "animelist.csv":
@@ -33,7 +35,7 @@ class DataIngestion:
                     
                     # Read only the first 50 lakh rows from 'animelist.csv'
                     logger.info(f"Large file {file_name} downloaded, now reading the first 50 lakh rows.")
-                    data = pd.read_csv(file_path, nrows=5000)  # Read only 5 million rows
+                    data = pd.read_csv(file_path, nrows=5000000)  # Read only 5 million rows
                     
                     # Save the first 50 lakh rows to the same file path
                     data.to_csv(file_path, index=False)
@@ -52,9 +54,7 @@ class DataIngestion:
     def run(self):
         try:
             logger.info("Starting data ingestion process")
-
             self.download_csv_from_gcp()
-
             logger.info("Data ingestion completed successfully")
 
         except CustomException as ce:
