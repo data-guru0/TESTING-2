@@ -26,7 +26,7 @@ COPY . /app
 WORKDIR /app
 
 # Install the required Python dependencies, including DVC
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -e .
 RUN pip install dvc
 
 # Set the GOOGLE_APPLICATION_CREDENTIALS environment variable inside the Docker container
