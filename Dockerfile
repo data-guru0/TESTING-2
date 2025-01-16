@@ -1,5 +1,5 @@
-# Use Google Cloud SDK Alpine-based image
-FROM google/cloud-sdk:alpine
+# Use a Python-based image with TensorFlow support
+FROM python:3.9-slim
 
 # Set environment variables to prevent Python from writing .pyc files & Ensure Python output is not buffered
 ENV PYTHONDONTWRITEBYTECODE=1 \
