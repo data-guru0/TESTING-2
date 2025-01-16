@@ -8,6 +8,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Install Python and necessary dependencies (pip, gfortran, git, etc.)
 RUN apk add --no-cache python3 py3-pip libhdf5-dev libblas-dev liblapack-dev gfortran git
 
+# Ensure the 'artifacts' directory and required subfolders exist before anything else
+RUN mkdir -p /app/artifacts/raw /app/artifacts/processed /app/artifacts/model /app/artifacts/model_checkpoint /app/artifacts/weights && \
+    chmod -R 777 /app/artifacts
+
 # Copy the application code into the container
 COPY . /app
 
@@ -29,11 +33,8 @@ RUN gcloud config set project ${GCP_PROJECT}
 # Pull the data from DVC using gcloud authentication
 RUN dvc pull
 
-# Ensure the 'artifacts' directory and required subfolders exist
-RUN mkdir -p artifacts/raw artifacts/processed artifacts/model artifacts/model_checkpoint artifacts/weights && chmod -R 777 artifacts/
-
 # Optionally: Check if the 'animelist.csv' file exists in the 'artifacts/raw' folder
-RUN test -f artifacts/raw/animelist.csv || (echo "File animelist.csv not found!" && exit 1)
+RUN test -f /app/artifacts/raw/animelist.csv || (echo "File animelist.csv not found!" && exit 1)
 
 # Train the model using the training pipeline script
 RUN python pipeline/training_pipeline.py
